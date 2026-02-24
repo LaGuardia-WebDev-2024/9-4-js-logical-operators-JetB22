@@ -16,7 +16,29 @@ draw = function() {
     if(mousePressed){
         labelCanvas();
     }
-};
+
+      if(mouseY < 200 && mousePressed){
+         stroke(0);
+        fill(random(255),50,50);
+        rect(0,0,400,200);
+    }
+    
+    strokeWeight(2);
+    stroke(0);
+    fill(0, 50, 50); 
+    rect(0, 200, 400, 400);  
+
+    fill(0, 0, 0);
+    textSize(30);
+    text("Click If You Dare", 90, 315);
+
+    if(mouseY > 200 && mousePressed){
+    stroke(0);
+    fill(random(255),random(255),random(255));
+    rect(0, 0, 400, 400); 
+    }
+
+}
 
 var labelCanvas = function(){
     fill(150)
